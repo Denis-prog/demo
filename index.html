@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper" id="window">
+        <div class="menu">
+            <h1 class="menu__title">Заражение</h1>
+            <form action="#" class="menu__setting">
+                <h2 class="menu__setting-title">Выбери сложность:</h2>
+                <p>
+                    <input type="radio" id="levelSimple" class="menu__setting-input menu__setting-input_radio"
+                        name="level" value="simple" checked>
+                    <label class="menu__setting-label_radio" for="levelSimple">Легко</label>
+                </p>
+                <p>
+                    <input type="radio" id="levelNormal" class="menu__setting-input menu__setting-input_radio"
+                        name="level" value="normal">
+                    <label class="menu__setting-label_radio" for="levelNormal">Нормально</label>
+                </p>
+                <p>
+                    <input type="radio" id="levelHard" class="menu__setting-input menu__setting-input_radio"
+                        name="level" value="hard">
+                    <label class="menu__setting-label_radio" for="levelHard">Мясорубка</label>
+                </p>
+                <buton class="menu__setting-submit" id="startGame">Старт</buton>
+            </form>
+            <p class="menu__more-description">Есть вопросы ? жми F !</p>
+            <p class="menu__more-description">Включи музыку ! жми S !</p>
+        </div>
+        <div class="game-info">
+            <p class="game-info__back">Жми ESC, чтобы вернуться</p>
+            <h2>Правила игры</h2>
+            <p class="game-info-title">Цель игры: </p>
+            Cпастись от нападения зараженных.
+            <div class="game-info__control game-info-item">
+                <p class="game-info__control-title game-info-title">Управление:</p>
+                <div class="game-info__control-preview">
+                    <div class="game-info__control-preview-player">
+                        <div class="game-info__control-preview-player-fire"></div>
+                    </div>
+                    <object class="game-info__control-preview-keqboard" type="image/svg+xml"
+                        data="./assets/keyBoard.svg"></object>
+                    </object>
+                </div>
+            </div>
+            <div class="game-info__environment game-info-item">
+                <p class="game-info__environment-title game-info-title">Игровое окружение:</p>
+                <div class="game-info__environment-item">
+                    <figure class="game-info__environment-item-image-box">
+                        <img class="game-info__environment-item-image-box-img" src="./assets/enemy-big.png" alt="enemy">
+                        <figcaption class="game-info__environment-item-image-box-subtitle">Зараженный</figcaption>
+                    </figure>
+                    <p class="game-info__environment-item-description">
+                        Представляет для тебя сереьзную опасность. Если заметил, что к тебе приближается зараженный,
+                        стреляй в
+                        него не задумываясь, даже если узнал в нем своего соседа. В противном случае -
+                        <span class="game-info__environment-item-description_important">ТЕБЕ КОНЕЦ</span> !
+                    </p>
+                </div>
+                <div class="game-info__environment-item">
+                    <figure class="game-info__environment-item-image-box">
+                        <img class="game-info__environment-item-image-box-img" src="./assets/bonus-big.png" alt="enemy">
+                        <figcaption class="game-info__environment-item-image-box-subtitle">Бонус</figcaption>
+                    </figure>
+                    <p class="game-info__environment-item-description">
+                        Даже в столь тяжелое время постапокалипсиса нужно уметь радоваться мелочам. И встреча данных
+                        бочек на своем пути -
+                        весомый повод для радости. Стреляй в них! И все зараженные в радиусе поражения будут уничтожены.
+                    </p>
+                </div>
+                <div class="game-info__environment-item">
+                    <figure class="game-info__environment-item-image-box">
+                        <img class="game-info__environment-item-image-box-img" src="./assets/gunCartridge-big.png" alt="enemy">
+                        <figcaption class="game-info__environment-item-image-box-subtitle">Индикатор патронов</figcaption>
+                    </figure>
+                    <p class="game-info__environment-item-description">
+                       Надеюсь, мне не нужно говорить тебе о том, что в мире боли и страданий, наличие патронов в твоем магазине - 
+                      важный фактор, который решает выживешь ты или нет. Поэтому, следи за индикатором. Каждый убитый зараженный это +1 патрон.
+                      Почаще стреляй в бочки, так как одним выстрелом ты убиваешь нескольких зараженных.
+                    </p>
+                </div>
+            </div>
+            <div class="difficulty-level game-info-item">
+                <p class="difficulty-level-title game-info-title">Описание уровней сложности:</p>
+                <p class="difficulty-level-description">
+                    В зависимости от того, какой уровень сложности ты выберешь, зараженные будут двигаться быстрее или
+                    медленнее, их количество будет различно.
+                    Помимо этого будет разной частота генерации бонусов и время, в течение которого этот бонус можно
+                    активировать. Начальное количество патронов в твоем арсенале также будет различно.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/templates.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/observers.js"></script>
+    <script src="./js/entity.js"></script>
+    <script src="./js/gameElements.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
